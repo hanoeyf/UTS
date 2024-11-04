@@ -27,7 +27,7 @@ function edit_buku($id_buku, $judul, $tahun_terbit, $jenis_buku) {
         $kon->exec($sql); 
         
         return "Buku berhasil diupdate!";
-    } catch (PDOException $e) {  
+    } catch (PDOException $e) {   
         return "Error: " . $e->getMessage();
     }
 }

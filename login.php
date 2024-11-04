@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
             echo "<script>alert('Selamat datang admin!'); window.location.href='list_buku.php';</script>";
             exit();
         } else {
-            echo "<script>alert('Password salah!');</script>";
+            echo "<script>alert('Password salah!');</script>"; 
         }
     } else {
         echo "<script>alert('Login gagal! Username tid

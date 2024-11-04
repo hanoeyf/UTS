@@ -9,8 +9,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['register'])) {
 
     try {
         $checkSql = "SELECT * FROM Login WHERE email = '$email'"; 
-        $checkStmt = $kon->query($checkSql);
-        $isiEmail = $checkStmt->fetch(PDO::FETCH_ASSOC); 
+        $simpanEmail = $kon->query($checkSql);
+        $isiEmail = $simpanEmail->fetch(PDO::FETCH_ASSOC); 
+        // var_dump($isiEmail);
+        // die();
+        // $2y$10$.JQIOL9wf1STG1TrdoFFU.75Vkv4LfeitmiUvTgpobfE5kkRpQY0u
 
         if ($isiEmail) {
             $pesan = "<p style='color: red;'>Email sudah terdaftar!</p>";
